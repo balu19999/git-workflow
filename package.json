@@ -26,7 +26,7 @@
   },
 "scripts": {
 "dev": "vite",
-"lint": "eslint --ext.jsx --fix src",
+"lint": "eslint --ext=.jsx --fix src",
 "build": "vite build",
 "preview": "vite preview",
 "test": "vitest run"
