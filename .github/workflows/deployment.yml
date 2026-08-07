@@ -8,7 +8,9 @@ jobs:
       - run: npm run lint
       - name: checkout the code
       - run: actions/checkout@v3
+      - name: install dependencies
+      - run: npm ci
       - name: test the code
       - run: npm build test
       - name: deployed the code
-      - run: echo "deployed succesfully"
+      - run: echo "deployed"
