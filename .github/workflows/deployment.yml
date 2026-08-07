@@ -4,13 +4,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: lint the code
-      - run: npm run lint
       - name: checkout the code
-      - run: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: install dependencies
-      - run: npm ci
+        run: npm ci
+      - name: lint the code
+        run: npm run lint
       - name: test the code
-      - run: npm build test
+        run: npm run test
+      - name: build the code
+        run: npm run build
       - name: deployed the code
-      - run: echo "deployed"
+        run: echo "deployed"
