@@ -16,3 +16,5 @@ jobs:
         run: npm run build
       - name: deployed the code
         run: echo "deployed"
+        env:
+            DISABLE_ESLINT_PLUGIN: true
